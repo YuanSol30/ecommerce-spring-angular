@@ -35,6 +35,8 @@ public class OrderServiceImpl implements OrderService {
         order.setTotalAmount(checkoutRequest.getTotalAmount());
         order.setStatus("CONFIRMED");
         order.setOrderDate(LocalDateTime.now());
+        // Set estimated delivery date to 5-7 business days from now
+        order.setEstimatedDeliveryDate(LocalDateTime.now().plusDays(7));
         order.setPaymentMethod(checkoutRequest.getPayment().getPaymentMethod());
         order.setPaymentStatus("PAID");
         order.setShippingAddress(checkoutRequest.getCustomer().getAddress());

@@ -24,6 +24,7 @@ public class OrderData {
     private double totalAmount;
     private String status;
     private LocalDateTime orderDate;
+    private LocalDateTime estimatedDeliveryDate;
     private String paymentMethod;
     private String paymentStatus;
     private String shippingAddress;
